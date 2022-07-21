@@ -25,11 +25,37 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(
       body: IntroductionScreen(
-
+      pages: [
+        PageViewModel(
+          title: "Fractional shares",
+          body:
+          "Instead of having to buy an entire share, invest any amount you want.",
+          image: Image.asset('images/1.jpg'),
+        ),PageViewModel(
+          title: "Fractional shares",
+          body:
+          "Instead of having to buy an entire share, invest any amount you want.",
+          image: Image.asset('images/1.jpg'),
+        ),PageViewModel(
+          title: "Fractional shares",
+          body:
+          "Instead of having to buy an entire share, invest any amount you want.",
+          image: Image.asset('images/1.jpg'),
+        ),
+      ],
+        onDone: (){
+            print("done");
+        },
+        showSkipButton: true,
+        showNextButton: false,
+        done: Text("Done"),
+        skip: Text("Skip"),
       ),
     ));
   }
