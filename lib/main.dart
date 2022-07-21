@@ -33,6 +33,7 @@ class _HomePageState extends State<HomePage> {
       body: IntroductionScreen(
       pages: [
         PageViewModel(
+
           title: "Fractional shares",
           body:
           "Instead of having to buy an entire share, invest any amount you want.",
@@ -56,6 +57,15 @@ class _HomePageState extends State<HomePage> {
         showNextButton: false,
         done: Text("Done"),
         skip: Text("Skip"),
+        dotsDecorator: DotsDecorator(
+          size: Size(10.0,10.0),
+          color: Colors.blue,
+          activeColor: Colors.green,
+          activeSize: Size(20.0,10.0),
+          activeShape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(20))
+          )
+        ),
       ),
     ));
   }
